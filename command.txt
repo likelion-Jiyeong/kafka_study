@@ -1,0 +1,8 @@
+# create topic
+bin/kafka-topics.sh --create --topic quickstart-events --broker-list localhost:9092 --partitions 3 --replication-factor 1
+
+# producer check
+bin/kafka-console-producer.sh --topic quickstart-events --broker-list localhost:9092
+
+# consumer check
+bin/kafka-console-consumer.sh --topic quickstart-events --from-beginning --bootstrap-server localhost:9092
